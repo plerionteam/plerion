@@ -1,0 +1,12 @@
+[
+  {
+    "route": "/",
+    "name": "Home",
+    "app": "plerion-home"
+  },
+  {
+    "route": "/space1",
+    "name": "Space 1",
+    "app": "vueapp"
+  }
+]
