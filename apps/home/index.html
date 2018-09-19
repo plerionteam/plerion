@@ -3,8 +3,6 @@
 
 <head>
   <title>Plerion Home</title>
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
@@ -16,30 +14,9 @@
 
   This is Plerion home
 
-  <script>
-    var app = new Vue({
-      el: '#spaces',
-      data: {
-        messages: [{
-          message: 'Hello Vue!'
-        },
-        {
-          message: 'Hello Vue!'
-        }],
-        spaces: null
-      },
-      created: function () {
-        const self = this;
-        axios.get('/app/spaces')
-          .then(function (response) {
-            self.spaces = response.data;
-          })
-          .catch(function (error) {
-            console.log(error);
-          });
-      },
-    })
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="/app/spaces/static/menu.js"></script>
 </body>
 
 </html>
