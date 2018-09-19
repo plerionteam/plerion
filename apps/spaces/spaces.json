@@ -2,7 +2,7 @@
   {
     "route": "/",
     "name": "Home",
-    "app": "plerion-home"
+    "app": "home"
   },
   {
     "route": "/space1",
