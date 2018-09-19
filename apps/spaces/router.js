@@ -3,7 +3,7 @@ const router = express.Router();
 
 const spaces = require('../../spaces.json');
 
-router.get('/spaces', function (req, res) {
+router.get('/', function (req, res) {
   res.send(spaces);
 });
 
