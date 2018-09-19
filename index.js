@@ -8,7 +8,7 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-const spaces = require('./spaces.json');
+const spaces = require('./apps/spaces/spaces.json');
 const appKeys = (p => readdirSync(p).filter(f => statSync(join(p, f)).isDirectory()))(path.join(__dirname, 'apps'));
 
 app.get('rest/plerion/spaces', function (req, res) {
