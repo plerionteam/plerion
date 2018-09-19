@@ -1,15 +1,10 @@
 /* global Vue, axios */
 
-new Vue({
-  el: '#spaces',
-  data: {
-    messages: [{
-      message: 'Hello Vue!'
-    },
-    {
-      message: 'Hello Vue!'
-    }],
-    spaces: null
+Vue.component('plerion-menu', {
+  data: function () {
+    return {
+      spaces: null
+    };
   },
   created: function () {
     const self = this;
@@ -21,4 +16,11 @@ new Vue({
         console.log(error);
       });
   },
+  template: `
+    <ul id="spaces">
+      <li v-for="space in spaces">
+        <a :href="space.route">{{ space.name }}</a>
+      </li>
+    </ul>
+  `
 });
