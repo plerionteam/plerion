@@ -25,9 +25,9 @@ spaces.forEach(space => {
 });
 
 appKeys.forEach(appKey => {
-  const restRouter  = path.join(__dirname, 'apps', appKey, 'rest-router.js');
+  const restRouter  = path.join(__dirname, 'apps', appKey, 'router.js');
   if (fs.existsSync(restRouter)) {
-    app.use('/rest/' + appKey, require(restRouter));
+    app.use('/app/' + appKey, require(restRouter));
   }
 });
 
